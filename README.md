@@ -1,3 +1,5 @@
+[![MihaiTudorP](https://circleci.com/gh/MihaiTudorP/SFG-Pet-clinic.svg?style=svg)](https://app.circleci.com/pipelines/github/MihaiTudorP/SFG-Pet-clinic)
+
 # SFG-Pet-clinic
 SFG pet Clinic
 
