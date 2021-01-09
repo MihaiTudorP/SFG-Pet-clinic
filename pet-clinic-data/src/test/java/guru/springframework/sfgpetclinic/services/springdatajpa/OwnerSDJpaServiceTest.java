@@ -77,7 +77,7 @@ class OwnerSDJpaServiceTest {
         when(ownerRepository.save(ownerToSave)).thenReturn(returnOwner);
         Owner savedOwner = service.save(ownerToSave);
         assertNotNull(savedOwner);
-        verify(ownerRepository).save(ownerToSave);
+        verify(ownerRepository, times(1)).save(ownerToSave);
     }
 
     @Test
@@ -89,6 +89,6 @@ class OwnerSDJpaServiceTest {
     @Test
     void deleteById() {
         service.deleteById(1L);
-        verify(ownerRepository, times(1)).delete(returnOwner);
+        verify(ownerRepository, times(1)).deleteById(1L);
     }
 }

@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "visits")
 public class Visit extends BaseEntity {
@@ -20,4 +19,13 @@ public class Visit extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
+
+    @Builder
+    public Visit(Long id, LocalDate date, String description, Pet pet) {
+        super();
+        super.setId(id);
+        this.date = date;
+        this.description = description;
+        this.pet = pet;
+    }
 }
