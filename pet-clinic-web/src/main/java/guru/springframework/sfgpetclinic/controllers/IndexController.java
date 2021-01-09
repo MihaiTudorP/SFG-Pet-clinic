@@ -11,7 +11,7 @@ public class IndexController {
     }
 
     @RequestMapping("/oups")
-    public String findOwners(){
+    public String error(){
         return "notimplemented";
     }
 }
